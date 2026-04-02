@@ -1,179 +1,128 @@
 :root {
-    --primary: #2563eb;
-    --dark: #0f172a;
-    --light: #f8fafc;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
-    --border: #e2e8f0;
-    --bg-card: #ffffff;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --bg: #000000;
+    --text: #e0e0e0;
+    --accent: #ffffff;
+    --muted: #666666;
+    --font-mono: 'Fira Code', monospace;
+    --font-sans: 'Inter', sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--light);
-    color: var(--text-main);
-    line-height: 1.5;
-    scroll-behavior: smooth;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Navigasyon */
-nav {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border);
-    background: rgba(248, 250, 252, 0.8);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-container {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    margin: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    justify-content: center;
+    padding: 80px 20px;
 }
 
-.logo {
-    font-weight: 800;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: var(--dark);
+.content {
+    max-width: 650px;
+    width: 100%;
 }
 
-.logo span { color: var(--primary); }
-
-.links a {
-    text-decoration: none;
-    color: var(--text-muted);
-    margin-left: 1.5rem;
+/* Header */
+header h1 {
+    font-family: var(--font-mono);
+    font-size: 1.8rem;
     font-weight: 500;
-    transition: 0.3s;
-}
-
-.links a:hover { color: var(--primary); }
-
-/* Hero Bölümü */
-.hero {
-    padding: 100px 0;
-    text-align: center;
-}
-
-.badge {
-    background: #dbeafe;
-    color: var(--primary);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 1.5rem 0;
-    letter-spacing: -0.02em;
-}
-
-.subtitle {
-    font-size: 1.25rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 2rem;
-}
-
-/* Butonlar */
-.btn {
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.btn.primary {
-    background: var(--dark);
-    color: white;
-}
-
-.btn.secondary {
-    border: 1px solid var(--border);
-    color: var(--text-main);
-}
-
-.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-
-/* Proje Kartları */
-.section-title {
-    margin-bottom: 3rem;
-    font-size: 2rem;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    border-color: var(--primary);
-    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
-}
-
-.card-content { padding: 2rem; }
-
-.tech-stack {
-    font-size: 0.75rem;
-    color: var(--primary);
-    font-weight: 700;
-    text-transform: uppercase;
+    color: var(--accent);
     margin-bottom: 0.5rem;
 }
 
-.project-card h3 { margin-bottom: 1rem; }
-
-.project-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+.lead {
+    font-family: var(--font-mono);
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
 }
 
-.project-link {
+/* Linkler */
+.links {
+    margin: 2rem 0;
+}
+
+.links a {
+    color: var(--accent);
     text-decoration: none;
-    color: var(--dark);
-    font-weight: 700;
+    margin-right: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--muted);
+    transition: all 0.2s;
+}
+
+.links a:hover {
+    border-bottom-color: var(--accent);
+    color: #fff;
+}
+
+/* Projeler Bölümü */
+.projects h2 {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-top: 3rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 0.5rem;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: baseline;
+    font-size: 0.95rem;
+}
+
+.date {
+    font-family: var(--font-mono);
+    color: var(--muted);
+    font-size: 0.8rem;
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.project-list a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.project-list a:hover {
+    text-decoration: underline;
+}
+
+.desc {
+    color: var(--muted);
     font-size: 0.9rem;
 }
 
 /* Footer */
 footer {
-    padding: 4rem 0;
-    border-top: 1px solid var(--border);
-    margin-top: 5rem;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    margin-top: 4rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.status {
+    color: #00ff00; /* Aktif olduğunu belirten yeşil nokta */
+    opacity: 0.8;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 500px) {
+    .project-list li {
+        flex-direction: column;
+    }
+    .date {
+        margin-bottom: 4px;
+    }
 }
