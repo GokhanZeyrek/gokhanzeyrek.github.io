@@ -3,39 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gökhan Zeyrek | Portfolio</title>
+    <title>Gökhan Zeyrek | Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">GZ<span>.</span></a>
+            <div class="links">
+                <a href="#projects">Projeler</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
         <div class="container">
+            <span class="badge">Açık Kaynak Meraklısı</span>
             <h1>Gökhan Zeyrek</h1>
-            <p>Computer Science Enthusiast & Developer</p>
+            <p class="subtitle">Sistem optimizasyonu, Python ve DIY projeleri üzerine odaklanan bir geliştirici.</p>
+            <div class="hero-btns">
+                <a href="mailto:email@adresin.com" class="btn primary">İletişime Geç</a>
+                <a href="#projects" class="btn secondary">Çalışmalarımı Gör</a>
+            </div>
         </div>
     </header>
 
-    <section id="about" class="container">
-        <h2>Hakkımda</h2>
-        <p>Teknolojiye ve bilgisayar donanımlarına meraklı bir geliştiriciyim. Performans optimizasyonu ve DIY projeleriyle uğraşmayı seviyorum.</p>
-    </section>
-
-    <section id="projects" class="container">
-        <h2>Projelerim</h2>
+    <main class="container" id="projects">
+        <h2 class="section-title">Öne Çıkan Projeler</h2>
         <div class="project-grid">
+            
             <div class="project-card">
-                <h3>Jarvis Assistant</h3>
-                <p>Python ile geliştirilen yerel sesli asistan projesi.</p>
+                <div class="card-content">
+                    <div class="tech-stack">Python • Automation</div>
+                    <h3>Jarvis Assistant</h3>
+                    <p>Sesli komutlarla yerel uygulamaları yöneten, kişiselleştirilmiş bir asistan arayüzü.</p>
+                    <a href="#" class="project-link">Detayları Gör →</a>
+                </div>
             </div>
+
             <div class="project-card">
-                <h3>Webcam App</h3>
-                <p>Akıllı telefonu web kamerasına dönüştüren Python uygulaması.</p>
+                <div class="card-content">
+                    <div class="tech-stack">Computer Vision • Python</div>
+                    <h3>DroidCam Custom</h3>
+                    <p>Mobil cihaz donanımını Windows üzerinde yüksek performanslı bir görüntü kaynağına dönüştürme.</p>
+                    <a href="#" class="project-link">Detayları Gör →</a>
+                </div>
             </div>
+
         </div>
-    </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Gökhan Zeyrek - GitHub Pages</p>
+        <div class="container">
+            <p>© 2026 Gökhan Zeyrek. Tüm hakları saklıdır.</p>
+        </div>
     </footer>
 
 </body>
