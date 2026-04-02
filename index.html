@@ -3,64 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gökhan Zeyrek | Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>gokhanzeyrek.dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">GZ<span>.</span></a>
-            <div class="links">
-                <a href="#projects">Projeler</a>
-                <a href="https://github.com" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </nav>
+    <main class="content">
+        <header>
+            <h1 class="glitch">gokhan_zeyrek</h1>
+            <p class="lead">// computer science enthusiast & maker</p>
+        </header>
 
-    <header class="hero">
-        <div class="container">
-            <span class="badge">Açık Kaynak Meraklısı</span>
-            <h1>Gökhan Zeyrek</h1>
-            <p class="subtitle">Sistem optimizasyonu, Python ve DIY projeleri üzerine odaklanan bir geliştirici.</p>
-            <div class="hero-btns">
-                <a href="mailto:email@adresin.com" class="btn primary">İletişime Geç</a>
-                <a href="#projects" class="btn secondary">Çalışmalarımı Gör</a>
-            </div>
-        </div>
-    </header>
+        <section class="bio">
+            <p>Sistem optimizasyonu, Python ve düşük seviyeli donanım projeleriyle ilgileniyorum. Karmaşık problemleri basit kodlarla çözmeyi seviyorum.</p>
+        </section>
 
-    <main class="container" id="projects">
-        <h2 class="section-title">Öne Çıkan Projeler</h2>
-        <div class="project-grid">
-            
-            <div class="project-card">
-                <div class="card-content">
-                    <div class="tech-stack">Python • Automation</div>
-                    <h3>Jarvis Assistant</h3>
-                    <p>Sesli komutlarla yerel uygulamaları yöneten, kişiselleştirilmiş bir asistan arayüzü.</p>
-                    <a href="#" class="project-link">Detayları Gör →</a>
-                </div>
-            </div>
+        <nav class="links">
+            <a href="https://github.com/gokhanzeyrek" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="mailto:gokhan@example.com">Email</a>
+        </nav>
 
-            <div class="project-card">
-                <div class="card-content">
-                    <div class="tech-stack">Computer Vision • Python</div>
-                    <h3>DroidCam Custom</h3>
-                    <p>Mobil cihaz donanımını Windows üzerinde yüksek performanslı bir görüntü kaynağına dönüştürme.</p>
-                    <a href="#" class="project-link">Detayları Gör →</a>
-                </div>
-            </div>
+        <section class="projects">
+            <h2>> projeler</h2>
+            <ul class="project-list">
+                <li>
+                    <span class="date">2026</span>
+                    <a href="#">Jarvis Assistant</a>
+                    <span class="desc">Local voice control system.</span>
+                </li>
+                <li>
+                    <span class="date">2026</span>
+                    <a href="#">DroidCam Python</a>
+                    <span class="desc">Hardware-to-webcam bridge.</span>
+                </li>
+                <li>
+                    <span class="date">2025</span>
+                    <a href="#">Ryzen Tuner</a>
+                    <span class="desc">Undervolting & optimization scripts.</span>
+                </li>
+            </ul>
+        </section>
 
+        <footer>
+            <p class="status">● System Operational</p>
         </div>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2026 Gökhan Zeyrek. Tüm hakları saklıdır.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
