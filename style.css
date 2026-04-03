@@ -30,15 +30,18 @@ nav {
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 
 /* Güncellenmiş Logo Ayarları */
+/* Güncellenmiş Logo Ayarları */
 .logo {
     font-weight: 800; 
     font-size: 1.6rem; 
     color: var(--primary);
-    text-decoration: none; 
-    letter-spacing: -1px; 
-    display: flex; /* Yan yana hizalamak için flex kullanıyoruz */
-    align-items: center; /* Dikeyde ortalıyoruz */
-    min-width: 320px; /* Genişliği biraz artırdık ki kelimeler sığsın */
+    display: flex; 
+    align-items: center; 
+    min-width: 320px; 
+    
+    /* YENİ EKLENEN KISIMLAR */
+    cursor: default; /* Üzerine gelince tıklanabilirmiş gibi el simgesi çıkmasını engeller */
+    margin-left: -20px; /* Yazıyı ve animasyonu hafif sola kaydırır */
 }
 
 /* Yeni Eklenen Sabit Yazı (Who Am I ?) */
