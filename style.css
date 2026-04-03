@@ -1,11 +1,11 @@
-/* Premium Siyah Tema */
+/* Premium Siyah Tema ve Renk Değişkenleri */
 :root {
     --bg-main: #000000;      /* Tam siyah */
-    --bg-card: #080808;      /* Çok hafifçe daha açık siyah */
+    --bg-card: #080808;      /* Çok hafifçe daha açık siyah (kartlar için) */
     --primary: #ffffff;      /* Ana metin beyaz */
     --accent: #2563eb;       /* Vurgu rengi (mavi) */
-    --text-muted: #888888;    /* Sönük metin */
-    --border: #1a1a1a;       /* Çok ince kenarlıklar */
+    --text-muted: #888888;    /* Sönük metin (gri) */
+    --border: #1a1a1a;       /* Çok ince, koyu gri kenarlıklar */
     --font-sans: 'Inter', sans-serif;
 }
 
@@ -17,7 +17,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Yumuşak aşağı kaydırma */
+    scroll-behavior: smooth; /* Menüden tıklayınca yumuşak aşağı kaydırma */
     background-color: var(--bg-main);
     color: var(--primary);
     font-family: var(--font-sans);
@@ -39,7 +39,7 @@ nav {
     padding: 1.2rem 0;
     border-bottom: 1px solid var(--border);
     background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px); /* Arka planı bulanıklaştırır */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -51,15 +51,27 @@ nav {
     align-items: center;
 }
 
+/* Daktilo Efektli Logo CSS'i */
 .logo {
     font-weight: 800;
     font-size: 1.6rem;
-    text-decoration: none;
     color: var(--primary);
+    text-decoration: none;
     letter-spacing: -1px;
+    display: inline-block;
+    min-width: 250px; /* Kelimeler değişirken sağdaki menünün kaymasını engeller */
 }
 
-.logo span { color: var(--accent); }
+/* Yanıp sönen imleç animasyonu */
+.cursor {
+    color: var(--accent); /* İmleç rengi (mavi) */
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
 
 .links a {
     text-decoration: none;
@@ -194,7 +206,7 @@ nav {
 .project-card:hover {
     border-color: var(--accent);
     transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 10px 40px rgba(37, 99, 235, 0.1); /* Mavi hover gölgesi */
 }
 
 .card-content { padding: 3rem; flex-grow: 1; }
