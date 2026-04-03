@@ -29,11 +29,32 @@ nav {
 }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 
+/* Güncellenmiş Logo Ayarları */
 .logo {
-    font-weight: 800; font-size: 1.6rem; color: var(--primary);
-    text-decoration: none; letter-spacing: -1px; display: inline-block; min-width: 250px;
+    font-weight: 800; 
+    font-size: 1.6rem; 
+    color: var(--primary);
+    text-decoration: none; 
+    letter-spacing: -1px; 
+    display: flex; /* Yan yana hizalamak için flex kullanıyoruz */
+    align-items: center; /* Dikeyde ortalıyoruz */
+    min-width: 320px; /* Genişliği biraz artırdık ki kelimeler sığsın */
 }
-.cursor { color: var(--accent); animation: blink 0.7s infinite; }
+
+/* Yeni Eklenen Sabit Yazı (Who Am I ?) */
+.static-text {
+    font-size: 1rem; /* Ana yazıdan daha küçük */
+    color: var(--text-muted); /* Gri tonunda, terminal komutu gibi dursun */
+    font-weight: 500;
+    margin-right: 12px; /* Daktilo yazısıyla arasına boşluk */
+    letter-spacing: 0;
+}
+
+.cursor { 
+    color: var(--accent); 
+    animation: blink 0.7s infinite; 
+    margin-left: 2px;
+}
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 .links a { text-decoration: none; color: var(--text-muted); margin-left: 2rem; font-weight: 500; font-size: 0.95rem; transition: 0.3s; }
