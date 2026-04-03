@@ -9,7 +9,7 @@ AOS.init({
 
 // 2. Daktilo (Typewriter) Efekti
 const textElement = document.getElementById('typewriter');
-const phrases = ["Gökhan Zeyrek", "Developer", "Debugger"];
+const phrases = ["Gökhan Zeyrek", "Developer", "Debugger", "Ai Developer", "Ai Analyst"];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
