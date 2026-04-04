@@ -60,7 +60,20 @@ nav {
 }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-.links a { text-decoration: none; color: var(--text-muted); margin-left: 2rem; font-weight: 500; font-size: 0.95rem; transition: 0.3s; }
+/* Menüyü topluca sağa kaydırmak için eklendi */
+.links {
+    transform: translateX(35px); /* 35 piksel yaklaşık 1 santimetreye denk gelir */
+}
+
+/* Mevcut kodun (Zaten var, aynen kalsın) */
+.links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    margin-left: 2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
 .links a:hover { color: var(--primary); }
 
 .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
