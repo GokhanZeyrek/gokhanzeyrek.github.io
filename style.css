@@ -41,7 +41,7 @@ nav {
     
     /* YENİ EKLENEN KISIMLAR */
     cursor: default; /* Üzerine gelince tıklanabilirmiş gibi el simgesi çıkmasını engeller */
-    margin-left: -20px; /* Yazıyı ve animasyonu hafif sola kaydırır */
+    margin-left: -50px; /* Yazıyı ve animasyonu hafif sola kaydırır */
 }
 
 /* Yeni Eklenen Sabit Yazı (Who Am I ?) */
