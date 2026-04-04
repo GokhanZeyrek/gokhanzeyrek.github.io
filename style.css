@@ -62,7 +62,7 @@ nav {
 
 /* Menüyü topluca sağa kaydırmak için eklendi */
 .links {
-    transform: translateX(35px); /* 35 piksel yaklaşık 1 santimetreye denk gelir */
+    transform: translateX(75px); /* 35 piksel yaklaşık 1 santimetreye denk gelir */
 }
 
 /* Mevcut kodun (Zaten var, aynen kalsın) */
