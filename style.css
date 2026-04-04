@@ -78,7 +78,7 @@ nav {
 
 .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
 .badge { background: rgba(37, 99, 235, 0.1); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(37, 99, 235, 0.3); margin-bottom: 2rem; display: inline-block; }
-.hero h1 { font-size: 4.5rem; font-weight: 800; letter-spacing: -0.05em; margin-bottom: 1.5rem; line-height: 1.1; }
+.hero h1 { font-family: 'Space Grotesk', sans-serif; /* YENİ EKLENEN SATIR */ font-size: 4.5rem; font-weight: 800; letter-spacing: -0.05em; margin-bottom: 1.5rem; line-height: 1.1; }
 .lead { font-size: 1.3rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem; font-weight: 300; }
 
 .btn { padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: 0.3s; display: inline-block; margin: 0 8px; }
