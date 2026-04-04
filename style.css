@@ -88,39 +88,45 @@ nav {
 .btn.secondary:hover { border-color: var(--text-muted); }
 
 /* ========================================= */
-/* BÖLÜM BAŞLIKLARI VE İÇERİKLER (SOLA YASLI)*/
+/* SOLA YASLI EKRAN DÜZENİ VE BÖLÜM AYARLARI */
 /* ========================================= */
+
+/* Sadece içerik bölümlerini ekranın soluna kaydırır (Ortalamayı iptal eder) */
+#about .container, 
+#goals .container, /* Eğer hedeflerim kısmını eklediysen */
+#projects .container, 
+#contact .container {
+    margin-left: 50px; /* Ekranın solundan tam olarak yaklaşık 2 parmak boşluk */
+    margin-right: auto;
+    max-width: 1200px; /* Satırların sonsuza kadar uzamasını engeller */
+    padding-left: 0;
+}
 
 /* Bölüm Başlıkları */
 .section-title {
     font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: -1px;
-    margin-bottom: 2.5rem;
-    margin-top: 7rem;
-    text-align: left; /* Başlıkları kesin olarak sola yapıştırır */
-}
-
-/* Hakkımda ve Hedeflerim Bölümü */
-.about-grid {
-    display: flex;
-    flex-direction: column; /* Yan yana değil, alt alta dizer */
-    align-items: flex-start; /* Her şeyi kutunun en soluna yaslar */
-    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+    margin-top: 8rem;
     text-align: left;
 }
 
-/* Yazıların sağa kadar uzayıp göz yormaması için sınır koyuyoruz */
-.about-grid p, .contact-grid p {
-    max-width: 800px; 
-    margin: 0;
+/* Hakkımda ve Hedeflerim (Eski 2 kolonlu yapıya geri döndük) */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Sol taraf yazı (büyük), sağ taraf yetenekler (küçük) */
+    gap: 4rem;
+    align-items: start; /* Kutuları üstten hizalar */
+    color: var(--text-muted);
+    font-size: 1.1rem;
 }
 
+/* Yetenekler Sağda */
 .skills-box {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: flex-start; /* Yetenek kutucuklarını sola yapıştırır */
 }
 
 .skills-box span {
@@ -133,42 +139,38 @@ nav {
     font-weight: 500;
 }
 
-/* Proje Kartları (Kartların içindeki yazıları da sola garantileyelim) */
+/* Proje Kartları Sola Yaslı Hizada */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    text-align: left;
 }
 
-/* İletişim (Contact) Bölümü */
+/* İletişim Bölümü (2 Kolonlu) */
 .contact-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-    text-align: left;
-    margin-bottom: 8rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 10rem;
 }
 
 .contact-links {
     display: flex;
-    flex-direction: row; /* Linkleri alt alta değil, yan yana dizer */
-    flex-wrap: wrap;
-    gap: 25px;
+    flex-direction: column; /* Linkler sağ tarafta alt alta şık durur */
+    gap: 15px;
 }
 
 .contact-item {
     color: var(--primary);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 500;
     transition: 0.2s;
-    border-bottom: 2px solid transparent; /* Altı çizili efekt için hazırlık */
-    padding-bottom: 2px;
 }
 
 .contact-item:hover { 
     color: var(--accent); 
-    border-bottom: 2px solid var(--accent); /* Üzerine gelince şık bir çizgi çıkar */
+    text-decoration: underline; 
 }
