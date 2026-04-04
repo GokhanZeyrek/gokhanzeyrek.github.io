@@ -18,6 +18,8 @@ html {
 }
 
 body { line-height: 1.7; overflow-x: hidden; }
+
+/* Orijinal Ortalanmış Konteyner */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
 nav {
@@ -27,58 +29,32 @@ nav {
     backdrop-filter: blur(15px);
     position: sticky; top: 0; z-index: 1000;
 }
+
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 
-/* Güncellenmiş Logo Ayarları */
-/* Güncellenmiş Logo Ayarları */
+/* Logo Ayarları (Who Am I) */
 .logo {
-    font-weight: 800; 
-    font-size: 1.6rem; 
-    color: var(--primary);
-    display: flex; 
-    align-items: center; 
-    min-width: 320px; 
-    
-    /* YENİ EKLENEN KISIMLAR */
-    cursor: default; /* Üzerine gelince tıklanabilirmiş gibi el simgesi çıkmasını engeller */
-    margin-left: -60px; /* Yazıyı ve animasyonu hafif sola kaydırır */
+    font-weight: 800; font-size: 1.6rem; color: var(--primary);
+    display: flex; align-items: center; min-width: 320px;
+    cursor: default; margin-left: -20px;
 }
-
-/* Yeni Eklenen Sabit Yazı (Who Am I ?) */
-.static-text {
-    font-size: 1rem; /* Ana yazıdan daha küçük */
-    color: var(--text-muted); /* Gri tonunda, terminal komutu gibi dursun */
-    font-weight: 500;
-    margin-right: 12px; /* Daktilo yazısıyla arasına boşluk */
-    letter-spacing: 0;
-}
-
-.cursor { 
-    color: var(--accent); 
-    animation: blink 0.7s infinite; 
-    margin-left: 2px;
-}
+.static-text { font-size: 1rem; color: var(--text-muted); font-weight: 500; margin-right: 12px; letter-spacing: 0; }
+.cursor { color: var(--accent); animation: blink 0.7s infinite; margin-left: 2px; }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-/* Menüyü topluca sağa kaydırmak için eklendi */
-.links {
-    transform: translateX(95px); /* 35 piksel yaklaşık 1 santimetreye denk gelir */
-}
-
-/* Mevcut kodun (Zaten var, aynen kalsın) */
-.links a {
-    text-decoration: none;
-    color: var(--text-muted);
-    margin-left: 2rem;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: 0.3s;
-}
+/* Menü Linkleri (Sağa Kaydırılmış) */
+.links { transform: translateX(35px); }
+.links a { text-decoration: none; color: var(--text-muted); margin-left: 2rem; font-weight: 500; font-size: 0.95rem; transition: 0.3s; }
 .links a:hover { color: var(--primary); }
 
 .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
 .badge { background: rgba(37, 99, 235, 0.1); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(37, 99, 235, 0.3); margin-bottom: 2rem; display: inline-block; }
-.hero h1 { font-family: 'Space Grotesk', sans-serif; /* YENİ EKLENEN SATIR */ font-size: 4.5rem; font-weight: 800; letter-spacing: -0.05em; margin-bottom: 1.5rem; line-height: 1.1; }
+
+/* Yeni Eklenen Space Grotesk Fontu */
+.hero h1 { 
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4.5rem; font-weight: 700; letter-spacing: -0.05em; margin-bottom: 1.5rem; line-height: 1.1; 
+}
 .lead { font-size: 1.3rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem; font-weight: 300; }
 
 .btn { padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: 0.3s; display: inline-block; margin: 0 8px; }
@@ -87,90 +63,26 @@ nav {
 .btn.secondary { border: 1px solid var(--border); color: var(--primary); background: var(--bg-card); }
 .btn.secondary:hover { border-color: var(--text-muted); }
 
-/* ========================================= */
-/* SOLA YASLI EKRAN DÜZENİ VE BÖLÜM AYARLARI */
-/* ========================================= */
+/* Orijinal Bölüm Başlıkları */
+.section-title { font-size: 2.2rem; font-weight: 700; letter-spacing: -1px; margin-bottom: 4rem; margin-top: 8rem; }
 
-/* Sadece içerik bölümlerini ekranın soluna kaydırır (Ortalamayı iptal eder) */
-#about .container, 
-#goals .container, /* Eğer hedeflerim kısmını eklediysen */
-#projects .container, 
-#contact .container {
-    margin-left: 50px; /* Ekranın solundan tam olarak yaklaşık 2 parmak boşluk */
-    margin-right: auto;
-    max-width: 1200px; /* Satırların sonsuza kadar uzamasını engeller */
-    padding-left: 0;
-}
+/* Orijinal Grid Yapısı (2 Kolon, Ortalanmış Kutular) */
+.about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: center; color: var(--text-muted); font-size: 1.1rem; }
+.skills-box { display: flex; flex-wrap: wrap; gap: 10px; }
+.skills-box span { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; }
 
-/* Bölüm Başlıkları */
-.section-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-    margin-bottom: 3.5rem;
-    margin-top: 8rem;
-    text-align: left;
-}
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+.project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; transition: 0.3s ease; display: flex; }
+.project-card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 10px 40px rgba(37, 99, 235, 0.1); }
+.card-content { padding: 3rem; flex-grow: 1; }
+.project-card h3 { font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700; letter-spacing: -0.5px; }
+.project-card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 2.5rem; }
+.project-link { text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.95rem; }
 
-/* Hakkımda ve Hedeflerim (Eski 2 kolonlu yapıya geri döndük) */
-.about-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* Sol taraf yazı (büyük), sağ taraf yetenekler (küçük) */
-    gap: 4rem;
-    align-items: start; /* Kutuları üstten hizalar */
-    color: var(--text-muted);
-    font-size: 1.1rem;
-}
+/* Orijinal İletişim Yapısı */
+.contact-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 10rem; }
+.contact-links { display: flex; flex-direction: column; gap: 15px; }
+.contact-item { color: var(--primary); text-decoration: none; font-weight: 500; transition: 0.2s; }
+.contact-item:hover { color: var(--accent); text-decoration: underline; }
 
-/* Yetenekler Sağda */
-.skills-box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skills-box span {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* Proje Kartları Sola Yaslı Hizada */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-}
-
-/* İletişim Bölümü (2 Kolonlu) */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    align-items: start;
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    margin-bottom: 10rem;
-}
-
-.contact-links {
-    display: flex;
-    flex-direction: column; /* Linkler sağ tarafta alt alta şık durur */
-    gap: 15px;
-}
-
-.contact-item {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.2s;
-}
-
-.contact-item:hover { 
-    color: var(--accent); 
-    text-decoration: underline; 
-}
+footer { padding: 4rem 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.9rem; background: var(--bg-card); }
